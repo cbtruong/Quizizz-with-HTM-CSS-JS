@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="styleSheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="app">
+                <h1>Simple Quiz</h1>
+                <div class="quiz">
+                    <h2 id="question">Question goes here</h2>
+                    <div id="answer-buttons">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
+                    <button id="next-btn">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="Script.js">
+        function adjustHeight() {
+        var element = document.querySelectorAll('.frame');// lấy ra danh sách các class là frame
+        console.log(element.length)
+        for (let i of element)
+        {
+        var width = i.offsetWidth; // Lấy chiều rộng của phần tử
+        var height = width * (3 / 4); // Tính toán chiều cao dựa trên tỉ lệ khía cạnh 3:4
+        i.style.height = height + 'px'; // Cập nhật chiều cao của phần tử
+        }
+        }
+
+        // Gọi hàm khi trang tải xong và khi cửa sổ được thay đổi kích thước
+        window.onload = adjustHeight;
+        window.onresize = adjustHeight;
+    </script>
+</html>

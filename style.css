@@ -1,0 +1,138 @@
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--width-menu: 15vw;
+}
+.session {
+	width: 99vw;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	box-sizing: border-box;
+	background-color: rgb(152, 134, 168);
+}
+.menu {
+	width: var(--width-menu);
+	position: fixed;
+	display: block;
+	height: 100vh;
+	background-color: black;
+}
+.content {
+	width: calc(100vw - (var(--width-menu)));
+	background: black;
+	margin-left: calc((var(--width-menu)));
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.frame {
+	width: 45%;
+	background-color: #ececec;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main {
+	width: 100%;
+	height: 100vh;
+	background-color: #ececec;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #001e4d;
+}
+.app {
+	background: #fff;
+	width: 90%;
+	max-width: 600px;
+	margin: 50px auto 0;
+	border-radius: 10px;
+	padding: 40px;
+}
+.app h1 {
+	font-size: 25px;
+	color: #001e4d;
+	font-weight: 600;
+	border-bottom: 1px solid #333;
+	padding-bottom: 30px;
+}
+.quiz {
+	padding: 20px 0;
+}
+.quiz h2 {
+	font-size: 18px;
+}
+.btn {
+	background: #fff;
+	color: #222;
+	font-weight: 500;
+	width: 100%;
+	border: 1px solid #222;
+	padding: 10px;
+	margin: 10px 0;
+	text-align: left;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.btn:hover:not([disabled]) {
+	background-color: #222;
+	color: #fff;
+}
+.btn:disabled {
+	cursor: no-drop;
+}
+#next-btn {
+	background: #001e4d;
+	color: #fff;
+	font-weight: 500;
+	width: 150px;
+	border: 0;
+	padding: 10px;
+	margin: 20px auto 0;
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+}
+.correct {
+	background: #3aeabc;
+}
+.incorrect {
+	background: #ff9393;
+}
+/* Điều chỉnh kích thước trên các thiết bị có màn hình nhỏ hơn */
+@media screen and (max-width: 900px) {
+	.main .app {
+		width: 50%;
+		/* Hoặc bạn có thể sử dụng giá trị khác như % hoặc px */
+		padding: 20px; /* Thay đổi các giá trị padding để phù hợp với kích thước nhỏ hơn */
+	}
+	.quiz h2 {
+		font-size: 14px;
+	}
+	.btn {
+		padding: 7px;
+		margin: 7px 0;
+	}
+}
+
+/* Điều chỉnh kích thước trên các thiết bị có màn hình nhỏ hơn */
+@media screen and (max-width: 480px) {
+	.app {
+		width: 100%; /* Đặt chiều rộng là 100% để phù hợp với màn hình nhỏ hơn */
+		padding: 15px; /* Thay đổi các giá trị padding để phù hợp với kích thước nhỏ hơn */
+	}
+}
